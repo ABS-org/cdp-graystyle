@@ -1,0 +1,12 @@
+{
+  "name": "graystyle-theme",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ABS-org/cdp-themes/tree/master/graystyle",
+  "authors": [
+    "Alberto Souze <alberto.souza.99@gmail.com>",
+    "Daniel Torres <daniel@updigital.me>"
+  ],
+  "description": "Tema graystyle para a rede comunidade de práticas.",
+  "license": "MIT",
+  "private": true
+}
