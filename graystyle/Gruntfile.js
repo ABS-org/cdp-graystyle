@@ -19,7 +19,7 @@ module.exports = function (grunt) {
     less: {
       compile: {
         files: {
-          'dist/css/style.css': 'assets/stylesheets/build.less'
+          'dist/css/style.css': 'src/stylesheets/build.less'
         }
       }
     },
