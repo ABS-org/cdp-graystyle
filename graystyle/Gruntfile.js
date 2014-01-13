@@ -18,8 +18,24 @@ module.exports = function (grunt) {
     // -----------------
     less: {
       compile: {
+        options: {
+          strictMath: true,
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapURL: 'src/stylesheets/style.css.map',
+          sourceMapFilename: 'dist/css/style.css.map'
+        },
         files: {
           'dist/css/style.css': 'src/stylesheets/build.less'
+        }
+      },
+      minify: {
+        options: {
+          cleancss: true,
+          report: 'min'
+        },
+        files: {
+          'dist/css/style.min.css': 'dist/css/style.css'
         }
       }
     },
@@ -35,6 +51,12 @@ module.exports = function (grunt) {
       stylesheets: {
         files: '**/**/*.less',
         tasks: ['less'],
+        options: {
+          livereload: true
+        }
+      },
+      templates: {
+        files: 'demo/**/*.html',
         options: {
           livereload: true
         }
