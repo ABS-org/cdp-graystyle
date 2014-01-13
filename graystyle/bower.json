@@ -8,5 +8,8 @@
   ],
   "description": "Tema graystyle para a rede comunidade de práticas.",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.0.3"
+  }
 }
