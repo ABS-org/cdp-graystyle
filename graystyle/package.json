@@ -1,0 +1,24 @@
+{
+  "name": "graystyle-theme",
+  "description": "Tema graystyle para a rede comunidade de práticas.",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ABS-org/cdp-themes/tree/master/graystyle",
+  "authors": [
+    "Alberto Souza <alberto.souza.99@gmail.com>",
+    "Daniel Torres <daniel@updigital.me>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ABS-org/cdp-themes.git"
+  },
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-less": "~0.8.3",
+    "grunt-contrib-watch": "~0.5.3",
+    "load-grunt-tasks": "~0.2.1"
+  }
+}
