@@ -40,6 +40,19 @@ module.exports = function (grunt) {
       }
     },
 
+    // ImageMin Task
+    // -----------------
+    imagemin: {                          // Task
+      dynamic: {                         // Another target
+        files: [{
+          expand: true,                  // Enable dynamic expansion
+          cwd: 'src/images/',                   // Src matches are relative to this path
+          src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+          dest: 'dist/img/'                  // Destination path prefix
+        }]
+      }
+    },
+
     watch: {
       gruntfile: {
         files: 'Gruntfile.js',
@@ -69,11 +82,13 @@ module.exports = function (grunt) {
   // These plugins provide necessary tasks.
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
+  grunt.registerTask('dist-images', ['imagemin']);
+
   // CSS distribution task.
   grunt.registerTask('dist-stylesheets', ['less']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['dist-stylesheets']);
+  grunt.registerTask('dist', ['dist-stylesheets', 'dist-images']);
 
   // Default task.
   grunt.registerTask('default', ['dist', 'watch']);
